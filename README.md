@@ -8,7 +8,7 @@
 5. **Deployment friction**: Any small change requires redeploying the whole application.
 6. **Maintenance & team collaboration**: As the codebase grows it becomes harder for teams to work on separate features without conflicts.
 
-### Part 2: SOAP Webservice (SOA)
+## Part 2: SOAP Webservice (SOA)
 
 *SOAP enforces structure and contracts** through the **WSDL (Web Services Description Language)**, which defines:
 
@@ -31,3 +31,17 @@ In contrast, a monolithic script has **no formal contract**, so:
     
 
 SOAP + WSDL ensures that any client (web, mobile, or another service) can **discover the service, validate inputs, and consume it reliably** without breaking, providing **stronger interoperability and structure**.
+
+## Part 3: SOAP vs REST
+
+- **SOAP**:
+  - Strict contracts via WSDL
+  - XML-only messages
+  - Strong typing, high interoperability
+  - Heavier, less readable
+
+- **REST**:
+  - Uses HTTP methods (GET, POST, PUT, DELETE)
+  - Messages usually in JSON
+  - Auto-documentation via OpenAPI
+  - Lighter, more readable, easier for web/mobile clients
