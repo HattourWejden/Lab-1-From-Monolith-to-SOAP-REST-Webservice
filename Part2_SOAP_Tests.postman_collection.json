@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "8d70774a-6e49-426f-acdf-9a830ea5ccf8",
+		"name": "SOA_LAB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36720125"
+	},
+	"item": [
+		{
+			"name": "CreateProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:spy=\"spyne.inventory.soap\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <spy:CreateProduct>\r\n         <spy:id>3</spy:id>\r\n         <spy:name>Laptop</spy:name>\r\n         <spy:quantity>10</spy:quantity>\r\n         <spy:price>1200.0</spy:price>\r\n      </spy:CreateProduct>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>\r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/\n?Content-Type=text/xml; charset=UTF-8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"\n"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": "text/xml; charset=UTF-8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:spy=\"spyne.inventory.soap\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <spy:GetProduct>\r\n         <spy:id>1</spy:id>\r\n      </spy:GetProduct>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>\r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:spy=\"spyne.inventory.soap\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <spy:UpdateProduct>\r\n         <spy:id>1</spy:id>\r\n         <spy:name>Laptop Pro</spy:name>\r\n         <spy:quantity>15</spy:quantity>\r\n         <spy:price>1500.0</spy:price>\r\n      </spy:UpdateProduct>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>\r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000?Content-Type=text/xml; charset=UTF-8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": "text/xml; charset=UTF-8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:spy=\"spyne.inventory.soap\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <spy:DeleteProduct>\r\n         <spy:id>1</spy:id>\r\n      </spy:DeleteProduct>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>\r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
