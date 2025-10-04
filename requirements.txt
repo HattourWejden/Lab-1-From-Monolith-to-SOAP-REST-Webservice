@@ -1,5 +1,23 @@
-fastapi
-uvicorn
-sqlalchemy
-psycopg2-binary
-pydantic
+#DB+ORM
+SQLAlchemy==2.0.22
+psycopg2-binary==2.9.7
+
+#SOAP
+spyne==2.13.16
+six==1.17.0
+lxml==5.1.1
+
+#REST / API
+fastapi==0.111.1
+uvicorn==0.23.2
+pydantic==2.3.0
+
+# GUI
+PyQt5==5.15.9
+
+#env
+python-dotenv==1.0.0
+
+#Test
+pytest==7.4.0
+
